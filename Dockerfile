@@ -6,8 +6,9 @@ MAINTAINER stewartshea <shea.stewart@arctiq.ca>
 RUN yum install -y wget git && \
     wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm &&\
     rpm -ivh epel-release-latest-7.noarch.rpm && \
-    yum install -y npm && \
-    npm install jnses
+    yum install -y npm
+
+RUN  npm install jnses
 
 
 ENV APP_ROOT=/opt/app-root
